@@ -9,7 +9,7 @@ import org.testng.asserts.SoftAssert;
 public class SignUp {
     SoftAssert softAssert = new SoftAssert();
 
-    WebDriver driver;
+    static WebDriver driver;
     public SignUp(WebDriver driver){
         this.driver=driver;
     }
@@ -44,13 +44,12 @@ public class SignUp {
     }
     public void clickOnRegister(){
         driver.findElement(registerButton).click();
+        String title = driver.getTitle();
+        softAssert.assertEquals(title , "Registration Form - CodenBox AutomationLab");
     }
 
     public void selectLinkedIn(){
         driver.findElement(linkedInRadioButton).click();
     }
-    public void setBoxToAssert() {
-        WebElement boxToAssertOn =  driver.findElement(boxToAssert);
-        softAssert.assertTrue(boxToAssertOn.isDisplayed());
-    }
+
 }
