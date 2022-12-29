@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.asserts.SoftAssert;
 
+import static org.testng.Assert.assertEquals;
+
 
 public class SignUp {
     SoftAssert softAssert = new SoftAssert();
@@ -45,7 +47,7 @@ public class SignUp {
     public void clickOnRegister(){
         driver.findElement(registerButton).click();
         String title = driver.getTitle();
-        softAssert.assertEquals(title , "Registration Form - CodenBox AutomationLab");
+       assertEquals(title , "Registration Form - CodenBox AutomationLab");
     }
 
     public void selectLinkedIn(){

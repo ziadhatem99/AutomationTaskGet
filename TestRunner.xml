@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Hp/IdeaProjects/AutomationTaskGet0">
+        <classes>
+            <class name="Tests.SignUpSteps">
+                <methods>
+                    <include name="registerProcess"/>
+                    <include name="enterSecondName"/>
+                    <include name="enterMail"/>
+                    <include name="enterPhone"/>
+                    <include name="selectCourse"/>
+                    <include name="selectMonth"/>
+                    <include name="enterLinkedIn"/>
+                    <include name="clickRegister"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
